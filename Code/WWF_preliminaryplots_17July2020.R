@@ -1,6 +1,5 @@
-setwd("C:/Users/wfetzer/Desktop")
 
-fish=read.table("Isotope_FirstLook.txt", header = T)
+fish=read.table("Data/Isotope_FirstLook.txt", header = T)
 
 head(fish)
 dim(fish)
@@ -101,6 +100,7 @@ axis(2, at=c(-40, -35, -30, -25, -20),las=1, cex.axis=10/10)
 plot(NULL, xlim=c(0,800), ylim= c(-2,8), xlab="Length", ylab="Sulfur", xaxt="n", yaxt="n",main="", type="n")
 
 points(lat$length, lat$S)
+points(koe$length, koe$S, col="red")
 
 axis(1, at=c(0,200,400,600,800),las=1, cex.axis=10/10)
 axis(2, at=c(-2,0,2,4,6,8),las=1, cex.axis=10/10)
